@@ -1,0 +1,137 @@
+*{
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+:root{
+    --white: hsl(0,100%,100%);
+    --green: hsl(154, 59%, 51%);
+    --hovergreen: hsl(154, 59%, 60%);
+    --blue: hsl(248, 32%, 49%);
+    --hoverblue: hsl(248, 32%, 55%);
+    --darkblue:hsl(249, 10%, 26%) ;
+    --grayishblue: hsl(246, 25%, 77%);
+    --shadow: 0 4px 0 1px rgba(81, 81, 81, 0.186);
+}
+body{
+    background-color: hsl(0, 100%, 74%);
+    background-image: url(./Registration-form/images/bg-intro-desktop.png);
+    background-size: cover;
+}
+
+.flex{
+    display: flex;
+    width: 65vw;
+    margin: 150px auto;
+}
+.flex-item1{
+    display:block;
+    color: var(--white);
+    padding:20px;
+    margin: auto;
+}
+.flex-item2{
+    display: block;
+}
+h1{
+    font-size: 2.5rem;
+}
+form{
+    width: 28vw;
+    background-color: var(--white);
+    padding: 30px;
+    border-radius: 5px;
+    color: hsl(0, 0%, 58%);
+    box-shadow: var(--shadow);
+    text-align: center;
+}
+form p{
+    font-size: 10px;
+}
+form a{
+    color: hsl(0, 100%, 50%);
+    text-decoration: none;
+}
+.form-item{
+    position: relative
+}
+
+.small{
+    font-size: 9px;
+    color: red;
+    position: absolute;
+    top: 50px;
+    display: none;
+    right: 0px;
+}
+input:invalid {
+    border: 2px solid red;
+}
+input:invalid{
+    border: 2px solid red;
+}
+input:invalid ~ .small{
+    display: block
+}
+.span-img{
+    position: absolute;
+    top: 15px;
+    right: 20px;
+    display: none;
+}
+input:invalid ~ .span-img{
+    display:block;
+}
+.button{
+    width: 100%;
+    padding: 10px 5px;
+    border: none;
+    border-radius: 5px;
+    margin-bottom: 10px;
+    box-shadow: var(--shadow);
+}
+.button.button1{
+    background-color: var(--blue); 
+    color: var(--grayishblue);
+}
+.button1:active{
+    background-color: var(--hoverblue);
+}
+.button1 strong{
+    color: var(--white)
+}
+input{
+    display: block;
+    padding: 10px;
+    width: 100%;
+    margin-bottom: 20px;
+}
+.button.button2{
+    background-color: var(--green);
+    color: var(--white);
+    margin-top: 10px
+}
+.button2:active{
+    background-color: var(--hovergreen);
+}
+
+@media screen and (max-width:760px) {
+    .flex{
+        flex-direction: column;
+        width: 100vw;
+        margin: 50px auto;
+        text-align: center;
+    }
+    form{
+        width: 90vw;
+        margin: auto
+    }
+    .button{
+        width: 70vw;
+    }
+    .button1{
+        width: 90vw;
+        padding: 25px;
+        margin-bottom: 20px;
+    }
+
+}
